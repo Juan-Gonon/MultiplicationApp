@@ -13,6 +13,23 @@ describe('Use case CreateTable', () => {
         expect(table).toContain('2 x 10 = 20')
         expect(rows).toBe(10)
 
+    })
+
+    it('should create table with custom values', () => {
+
+     const options = {
+        base: 3,
+        limit: 20
+     }
+
+     const createTable = new CreateTable()
+
+     const table = createTable.execute(options)
+     const rows = table.split('\n').length
+
+     expect(table).toContain('3 x 15 = 45')
+     expect(rows).toBe(options.limit)
+
 
 
 
