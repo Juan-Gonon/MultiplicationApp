@@ -20,7 +20,9 @@ export class CreateTable implements CreateTableUseCse {
 
         for(let i=0; i<limit; i++){
     
-            message += `${base} x ${i+1} = ${base * (i+1)}\n`
+            message += `${base} x ${i+1} = ${base * (i+1)}`
+
+            if( i+1 < limit) message += '\n'
         }
 
         return message
