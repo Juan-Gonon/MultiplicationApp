@@ -3,6 +3,15 @@ import fs, { ftruncate }  from 'fs'
 
 describe('SaveFileUseCase', () => {
 
+    // beforeEach(() => {
+    //     fs.rmSync('outputs', { recursive: true })
+    // })
+
+    afterEach(() => {
+        // clean up
+        fs.rmSync('outputs', { recursive: true })
+    })
+
     it('should save file with default values', () => {
 
         const options = {
@@ -20,8 +29,6 @@ describe('SaveFileUseCase', () => {
         expect(fileExist).toBeTruthy()
         expect(fileContent).toBe(options.fileContent)
 
-
-    
 
 
     })
