@@ -2,4 +2,8 @@ node_modules
 dist
 .vscode
 outputs
+coverage
+/coverage
+coverage/
 
+test-destination
