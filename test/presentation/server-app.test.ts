@@ -30,25 +30,25 @@ describe('Server app', () => {
     it('should run ServerApp with options ', () => {
 
         
-        // const logSpy = jest.spyOn(console, 'log')
-        // const createdTableSpy = jest.spyOn(CreateTable.prototype,'execute')
-        // const saveFileSpy = jest.spyOn(SaveFile.prototype, 'execute')
+        const logSpy = jest.spyOn(console, 'log')
+        const createdTableSpy = jest.spyOn(CreateTable.prototype,'execute')
+        const saveFileSpy = jest.spyOn(SaveFile.prototype, 'execute')
 
        
-        // ServerApp.run(options)
+        ServerApp.run(options)
 
-        // expect(logSpy).toHaveBeenCalledTimes(2)
-        // expect(logSpy).toHaveBeenCalledWith('Server running...')
-        // expect(logSpy).toHaveBeenCalledWith('File created')
+        expect(logSpy).toHaveBeenCalledTimes(2)
+        expect(logSpy).toHaveBeenCalledWith('Server running...')
+        expect(logSpy).toHaveBeenCalledWith('File created')
 
-        // expect(createdTableSpy).toHaveBeenCalledWith({"base": options.base, "limit": options.limit})
+        expect(createdTableSpy).toHaveBeenCalledWith({"base": options.base, "limit": options.limit})
 
-        // expect(saveFileSpy).toHaveBeenCalledTimes(1)
-        // expect(saveFileSpy).toHaveBeenCalledWith({
-        //     fileContent: expect.any(String),
-        //     fileDestination: options.destination,
-        //     fileName: options.name
-        // })
+        expect(saveFileSpy).toHaveBeenCalledTimes(1)
+        expect(saveFileSpy).toHaveBeenCalledWith({
+            fileContent: expect.any(String),
+            fileDestination: options.destination,
+            fileName: options.name
+        })
 
        
 
